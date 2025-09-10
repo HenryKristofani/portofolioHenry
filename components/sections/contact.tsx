@@ -81,7 +81,7 @@ const Contact = () => {
     <section id="contact" className="py-24 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-playfair font-permanent-marker text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
             Let's Work Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <Card className="p-8 bg-card border-border animate-slide-up">
-            <h3 className="font-playfair text-2xl font-semibold text-foreground mb-6">Send a Message</h3>
+            <h3 className="font-playfair font-permanent-marker text-2xl font-semibold text-foreground mb-6">Send a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
@@ -170,7 +170,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
             <Card className="p-8 bg-card border-border">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground mb-6">Get in Touch</h3>
+              <h3 className="font-playfair font-permanent-marker text-2xl font-semibold text-foreground mb-6">Get in Touch</h3>
 
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
@@ -190,7 +190,7 @@ const Contact = () => {
             </Card>
 
             <Card className="p-8 bg-card border-border">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground mb-6">Follow Me</h3>
+              <h3 className="font-playfair font-permanent-marker text-2xl font-semibold text-foreground mb-6">Follow Me</h3>
 
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (

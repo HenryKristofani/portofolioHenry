@@ -41,7 +41,7 @@ const About = () => {
     <section id="about" className="py-24 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">About Me</h2>
+          <h2 className="font-playfair font-permanent-marker text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
             Passionate about creating meaningful digital experiences that connect with people
           </p>
@@ -84,7 +84,7 @@ const About = () => {
           <div className="space-y-8 animate-slide-up">
             {/* Skills */}
             <Card className="p-6 bg-card border-border">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground mb-4">Skills & Expertise</h3>
+              <h3 className="font-playfair font-permanent-marker text-2xl font-semibold text-foreground mb-4">Skills & Expertise</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
                   <Badge
@@ -100,7 +100,7 @@ const About = () => {
 
             {/* Experience */}
             <Card className="p-6 bg-card border-border">
-              <h3 className="font-playfair text-2xl font-semibold text-foreground mb-6">Experience</h3>
+              <h3 className="font-playfair font-permanent-marker text-2xl font-semibold text-foreground mb-6">Experience</h3>
               <div className="space-y-6">
                 {experience.map((exp, index) => (
                   <div key={index} className="border-l-2 border-primary/20 pl-4">

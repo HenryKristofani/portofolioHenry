@@ -1,3 +1,8 @@
+/* Permanent Marker font utility */
+.font-permanent-marker {
+  font-family: var(--font-permanent-marker), cursive;
+  letter-spacing: 0.5px;
+}
 @import 'tailwindcss';
 @import 'tw-animate-css';
 

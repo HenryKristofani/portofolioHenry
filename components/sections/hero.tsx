@@ -30,7 +30,7 @@ const Hero = () => {
 
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          <h1 className="font-playfair text-6xl md:text-8xl font-bold text-foreground mb-6 text-balance">Your Name</h1>
+          <h1 className="font-playfair font-permanent-marker text-6xl md:text-8xl font-bold text-foreground mb-6 text-balance">Your Name</h1>
           <p
             className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance animate-slide-up"
             style={{ animationDelay: "0.3s" }}

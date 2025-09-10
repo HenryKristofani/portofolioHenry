@@ -90,7 +90,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="font-playfair font-permanent-marker text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
             Featured Work
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -157,7 +157,7 @@ const Portfolio = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="font-playfair text-xl font-semibold text-foreground mb-2">{project.title}</h3>
+                <h3 className="font-playfair font-permanent-marker text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
