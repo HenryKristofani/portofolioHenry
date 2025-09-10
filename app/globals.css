@@ -1,0 +1,273 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to coffee-inspired palette */
+  --background: oklch(1 0 0); /* Pure white background */
+  --foreground: oklch(0.35 0.05 45); /* Rich coffee brown for text */
+  --card: oklch(0.97 0.01 45); /* Cream for card backgrounds */
+  --card-foreground: oklch(0.35 0.05 45); /* Coffee brown text on cards */
+  --popover: oklch(0.92 0.02 45); /* Light beige for popovers */
+  --popover-foreground: oklch(0.35 0.05 45); /* Coffee brown text */
+  --primary: oklch(0.45 0.08 35); /* Sienna for primary actions */
+  --primary-foreground: oklch(1 0 0); /* White text on primary */
+  --secondary: oklch(0.35 0.05 45); /* Coffee brown for secondary */
+  --secondary-foreground: oklch(1 0 0); /* White text on secondary */
+  --muted: oklch(0.97 0.01 45); /* Cream for muted elements */
+  --muted-foreground: oklch(0.35 0.05 45); /* Coffee brown muted text */
+  --accent: oklch(0.45 0.08 35); /* Sienna for accents */
+  --accent-foreground: oklch(1 0 0); /* White text on accents */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.02 45); /* Light beige borders */
+  --input: oklch(1 0 0); /* White input fields */
+  --ring: oklch(0.45 0.08 35); /* Sienna focus rings */
+  --chart-1: oklch(0.35 0.05 45); /* Coffee brown */
+  --chart-2: oklch(0.45 0.08 35); /* Sienna */
+  --chart-3: oklch(0.92 0.02 45); /* Light beige */
+  --chart-4: oklch(0.97 0.01 45); /* Cream */
+  --chart-5: oklch(1 0 0); /* White */
+  --radius: 0.5rem; /* Softer rounded corners */
+  --sidebar: oklch(0.97 0.01 45); /* Cream sidebar */
+  --sidebar-foreground: oklch(0.35 0.05 45); /* Coffee brown sidebar text */
+  --sidebar-primary: oklch(0.92 0.02 45); /* Light beige sidebar primary */
+  --sidebar-primary-foreground: oklch(0.35 0.05 45); /* Coffee brown text */
+  --sidebar-accent: oklch(0.45 0.08 35); /* Sienna sidebar accents */
+  --sidebar-accent-foreground: oklch(1 0 0); /* White text on accents */
+  --sidebar-border: oklch(0.92 0.02 45); /* Light beige borders */
+  --sidebar-ring: oklch(0.45 0.08 35); /* Sienna focus rings */
+}
+
+.dark {
+  /* Updated dark mode tokens to maintain coffee theme */
+  --background: oklch(0.15 0.02 45); /* Dark coffee background */
+  --foreground: oklch(0.97 0.01 45); /* Cream text */
+  --card: oklch(0.2 0.03 45); /* Darker coffee cards */
+  --card-foreground: oklch(0.97 0.01 45); /* Cream card text */
+  --popover: oklch(0.2 0.03 45); /* Dark coffee popovers */
+  --popover-foreground: oklch(0.97 0.01 45); /* Cream popover text */
+  --primary: oklch(0.55 0.1 35); /* Lighter sienna for dark mode */
+  --primary-foreground: oklch(0.15 0.02 45); /* Dark text on primary */
+  --secondary: oklch(0.25 0.04 45); /* Medium coffee secondary */
+  --secondary-foreground: oklch(0.97 0.01 45); /* Cream text */
+  --muted: oklch(0.25 0.04 45); /* Medium coffee muted */
+  --muted-foreground: oklch(0.7 0.02 45); /* Lighter muted text */
+  --accent: oklch(0.55 0.1 35); /* Lighter sienna accents */
+  --accent-foreground: oklch(0.15 0.02 45); /* Dark text on accents */
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.25 0.04 45); /* Medium coffee borders */
+  --input: oklch(0.25 0.04 45); /* Medium coffee inputs */
+  --ring: oklch(0.55 0.1 35); /* Lighter sienna rings */
+  --chart-1: oklch(0.55 0.1 35);
+  --chart-2: oklch(0.7 0.08 25);
+  --chart-3: oklch(0.45 0.06 45);
+  --chart-4: oklch(0.35 0.04 35);
+  --chart-5: oklch(0.25 0.03 45);
+  --sidebar: oklch(0.2 0.03 45); /* Dark coffee sidebar */
+  --sidebar-foreground: oklch(0.97 0.01 45); /* Cream sidebar text */
+  --sidebar-primary: oklch(0.55 0.1 35); /* Sienna sidebar primary */
+  --sidebar-primary-foreground: oklch(0.15 0.02 45); /* Dark text */
+  --sidebar-accent: oklch(0.25 0.04 45); /* Medium coffee accents */
+  --sidebar-accent-foreground: oklch(0.97 0.01 45); /* Cream text */
+  --sidebar-border: oklch(0.25 0.04 45); /* Medium coffee borders */
+  --sidebar-ring: oklch(0.55 0.1 35); /* Sienna rings */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom coffee-inspired utility classes */
+@layer utilities {
+  .coffee-gradient {
+    background: linear-gradient(135deg, oklch(0.97 0.01 45) 0%, oklch(0.92 0.02 45) 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .parallax-slow {
+    transform: translateY(var(--scroll-y, 0) * 0.5);
+  }
+
+  .parallax-fast {
+    transform: translateY(var(--scroll-y, 0) * -0.3);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid oklch(0.45 0.08 35);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.97 0.01 45);
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.45 0.08 35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.35 0.05 45);
+}
