@@ -23,7 +23,7 @@ const permanentMarker = Permanent_Marker({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
+  title: "Portfolio | Henry Kristofani",
   description: "Personal portfolio showcasing creative work and projects",
   generator: "v0.app",
 }

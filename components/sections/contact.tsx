@@ -219,7 +219,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Your Name. All rights reserved. Built with passion and lots of coffee.
+            © 2024 Henry Kristofani. All rights reserved. Built with passion and lots of coffee.
           </p>
         </div>
       </div>
